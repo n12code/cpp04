@@ -6,11 +6,12 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:06 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 13:34:57 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/04 14:09:22 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Dog.hpp"
+#include "../inc/Animal.hpp"
 #include <iostream>
 
 Dog::Dog() : Animal(), _type("dog")

@@ -6,11 +6,12 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:03 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 13:32:06 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/04 14:09:16 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cat.hpp"
+#include "../inc/Animal.hpp"
 #include <iostream>
 
 Cat::Cat() : Animal(), _type("cat")
