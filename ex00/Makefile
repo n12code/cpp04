@@ -1,0 +1,40 @@
+NAME = animal
+CXX = g++
+CXXFLAGS = -g -Wall -Wextra -Werror -Wshadow -std=c++98
+I_FLAGS = -I$(INC_DIR)
+
+OBJ_DIR = obj
+SRC_DIR = src
+INC_DIR = inc
+
+FILES = main Animal Dog Cat
+SRC = $(addprefix $(SRC_DIR)/, $(addsuffix .cpp, $(FILES)))
+OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILES)))
+
+HEADERS = Animal.hpp Dog.hpp Cat.hpp
+HEADERS := $(addprefix $(INC_DIR)/, $(HEADERS))
+
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	@echo "compiling the binary\n"
+	$(CXX) $(CXXFLAGS) $(I_FLAGS) $(OBJ) -o $(NAME)
+	@echo "\nprogram created"
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(HEADERS)
+	@echo "compiling the obj"
+	@mkdir -p $(OBJ_DIR)
+	@$(CXX) $(CXXFLAGS) $(I_FLAGS) -c $< -o $@
+
+clean:
+	@echo "removing obj"
+	@rm -rf $(OBJ_DIR)
+
+fclean: clean
+	@echo "removing the binary"
+	@rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
