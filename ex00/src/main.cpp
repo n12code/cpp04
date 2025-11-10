@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:13:44 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/05 15:48:08 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/06 15:40:41 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,12 @@ int main()
     wrongCat->makeSound();
     wrongMeta->makeSound();
     
+    std::cout << std::endl;
+
+    delete meta;
+    delete j;
+    delete i;
+    delete wrongMeta;
+    delete wrongCat;
     return 0;
 }

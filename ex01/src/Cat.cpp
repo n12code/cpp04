@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:03 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/05 19:23:30 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 19:32:05 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat() : Animal(), _type("cat"), _brain(new Brain())
     std::cout << "log - cat constructor" << std::endl;
 }
 
-Cat::Cat(const Cat& obj) : Animal(), _type(obj._type), _brain(new Brain(*obj._brain))
+Cat::Cat(const Cat& obj) : Animal(obj), _type(obj._type), _brain(new Brain(*obj._brain))
 {
     std::cout << "log - cat copy constructor" << std::endl;
 }
@@ -46,4 +46,19 @@ std::string Cat::getType() const
 void    Cat::makeSound() const
 {
     std::cout << "miaoooow" << std::endl;
+}
+
+void    Cat::setIdeas(const std::string& idea)
+{
+    _brain->setIdeas(idea);
+}
+
+Brain* Cat::getBrain()
+{
+    return (_brain->getBrain());
+}
+
+void    Cat::printIdeas()
+{
+    _brain->printIdeas();
 }

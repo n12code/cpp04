@@ -1,17 +1,17 @@
 NAME = animal
-CXX = g++
-CXXFLAGS = -g -Wall -Wextra -Werror -Wshadow -std=c++98
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -Wshadow -std=c++98
 I_FLAGS = -I$(INC_DIR)
 
 OBJ_DIR = obj
 SRC_DIR = src
 INC_DIR = inc
 
-FILES = main Animal Dog Cat WrongAnimal WrongCat
+FILES = main Animal Dog Cat WrongAnimal WrongCat Brain
 SRC = $(addprefix $(SRC_DIR)/, $(addsuffix .cpp, $(FILES)))
 OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILES)))
 
-HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 HEADERS := $(addprefix $(INC_DIR)/, $(HEADERS))
 
 

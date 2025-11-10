@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:13:38 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/05 16:28:15 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 19:13:52 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ class Cat : public Animal
         ~Cat();
         
         std::string getType() const;
-        void makeSound() const;
+        void        makeSound() const;
+        void        setIdeas(const std::string& idea);
+        Brain*      getBrain();
+        void        printIdeas();
 };
 
 #endif

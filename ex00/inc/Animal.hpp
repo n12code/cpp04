@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:13:26 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 13:33:33 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/06 15:32:29 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal
         Animal();
         Animal(const Animal& obj);
         Animal& operator=(const Animal& obj);
-        ~Animal();
+        virtual ~Animal();
         
         virtual std::string getType() const;
         virtual void makeSound() const;

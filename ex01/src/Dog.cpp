@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:06 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/05 19:20:11 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/10 19:31:58 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Dog::Dog() : Animal(), _type("dog"), _brain(new Brain())
     std::cout << "log - dog constructor" << std::endl;
 }
 
-Dog::Dog(const Dog& obj) :  Animal(), _type(obj._type), _brain(new Brain(*obj._brain))
+Dog::Dog(const Dog& obj) :  Animal(obj), _type(obj._type), _brain(new Brain(*obj._brain))
 {    
     std::cout << "log - dog copy constructor" << std::endl;
 }
@@ -46,4 +46,19 @@ std::string Dog::getType() const
 void    Dog::makeSound() const
 {
     std::cout << "woufwouf" << std::endl;
+}
+
+void    Dog::setIdeas(const std::string& idea)
+{
+    _brain->setIdeas(idea);
+}
+
+Brain* Dog::getBrain()
+{
+    return (_brain->getBrain());
+}
+
+void    Dog::printIdeas()
+{
+    _brain->printIdeas();
 }
