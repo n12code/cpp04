@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:03 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:47:26 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 19:36:17 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include "../inc/Animal.hpp"
 #include <iostream>
 
-Cat::Cat() : Animal(), _brain(new Brain())
+Cat::Cat() : AAnimal(), _brain(new Brain())
 {
     type = "cat";
     std::cout << "log - cat constructor" << std::endl;
 }
 
-Cat::Cat(const Cat& obj) : Animal(obj), _brain(new Brain(*obj._brain))
+Cat::Cat(const Cat& obj) : AAnimal(obj), _brain(new Brain(*obj._brain))
 {
-    Animal::operator=(obj);
+    AAnimal::operator=(obj);
     std::cout << "log - cat copy constructor" << std::endl;
 }
 
@@ -36,7 +36,7 @@ Cat& Cat::operator=(const Cat& obj)
 {
     if (this != &obj)
     {
-        Animal::operator=(obj);
+        AAnimal::operator=(obj);
         delete _brain;
         _brain = new Brain(*obj._brain);
     }

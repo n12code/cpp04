@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:06 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:44:10 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 19:37:03 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 #include "../inc/Animal.hpp"
 #include <iostream>
 
-Dog::Dog() : Animal(), _brain(new Brain())
+Dog::Dog() : AAnimal(), _brain(new Brain())
 {
     type = "dog";
     std::cout << "log - dog constructor" << std::endl;
 }
 
-Dog::Dog(const Dog& obj) :  Animal(obj), _brain(new Brain(*obj._brain))
+Dog::Dog(const Dog& obj) :  AAnimal(obj), _brain(new Brain(*obj._brain))
 {
-    Animal::operator=(obj);
+    AAnimal::operator=(obj);
     std::cout << "log - dog copy constructor" << std::endl;
 }
 
@@ -36,7 +36,7 @@ Dog& Dog::operator=(const Dog& obj)
 {
     if (this != &obj)
     {
-        Animal::operator=(obj);
+        AAnimal::operator=(obj);
         delete _brain;
         _brain = new Brain(*obj._brain);
     }

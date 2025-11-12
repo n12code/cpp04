@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:13:32 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:29:05 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 19:37:22 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "Brain.hpp"
 # include <iostream>
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
     private:
         Brain*      _brain;
