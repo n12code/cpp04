@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 14:02:28 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 14:15:39 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 18:23:12 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class WrongCat : public WrongAnimal
 {
-    private:
-        std::string _type;
     public:
         WrongCat();
         WrongCat(const WrongCat& obj);

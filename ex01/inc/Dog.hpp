@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:13:32 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/10 19:13:09 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 17:29:05 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 class Dog : public Animal
 {
     private:
-        std::string _type;
         Brain*      _brain;
     public:
         Dog();

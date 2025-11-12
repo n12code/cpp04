@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:01 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 13:30:37 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 18:24:51 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ Animal::~Animal()
 
 Animal& Animal::operator=(const Animal& obj)
 {
-    type = obj.type;
+    if (this != &obj)
+        type = obj.type;
     std::cout << "log - animal copy assignement operator" << std::endl;
     return (*this);
 }

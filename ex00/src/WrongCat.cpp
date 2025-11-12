@@ -14,13 +14,15 @@
 #include "../inc/WrongAnimal.hpp"
 #include <iostream>
 
-WrongCat::WrongCat() : WrongAnimal(), _type("wrongCat")
+WrongCat::WrongCat() : WrongAnimal()
 {
+    type = "wrongCat";
     std::cout << "log - wrongCat constructor" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(), _type(obj._type)
+WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal()
 {
+    WrongAnimal::operator=(obj);
     std::cout << "log - wrongCat copy constructor" << std::endl;
 }
 
@@ -31,14 +33,15 @@ WrongCat::~WrongCat()
 
 WrongCat& WrongCat::operator=(const WrongCat& obj)
 {
-    _type = obj._type;
+    if (this != &obj)
+        WrongAnimal::operator=(obj);
     std::cout << "log - wrongCat copy assignement operator" << std::endl;
     return (*this);
 }
 
 std::string WrongCat::getType() const
 {
-    return (this->_type);
+    return (this->type);
 }
 
 void    WrongCat::makeSound() const

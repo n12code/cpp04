@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 14:02:30 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 14:11:14 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 18:26:22 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& obj)
 {
-    type = obj.type;
+    if (this != &obj)
+        type = obj.type;
     std::cout << "log - wrongAnimal copy assignement operator" << std::endl;
     return (*this);
 }

@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 14:02:28 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 14:15:39 by nbodin           ###   ########lyon.fr   */
+/*   Created: 2025/11/04 12:13:38 by nbodin            #+#    #+#             */
+/*   Updated: 2025/11/12 17:29:11 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONG_CAT_HPP
-# define WRONG_CAT_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include "WrongAnimal.hpp"
+# include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
-class WrongCat : public WrongAnimal
+class Cat : public Animal
 {
     private:
-        std::string _type;
+        Brain*      _brain;
     public:
-        WrongCat();
-        WrongCat(const WrongCat& obj);
-        WrongCat& operator=(const WrongCat& obj);
-        ~WrongCat();
+        Cat();
+        Cat(const Cat& obj);
+        Cat& operator=(const Cat& obj);
+        ~Cat();
         
         std::string getType() const;
-        void makeSound() const;
+        void        makeSound() const;
+        void        setIdeas(const std::string& idea);
+        Brain*      getBrain();
+        void        printIdeas();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:13:38 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/04 13:33:55 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/12 18:18:09 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class Cat : public Animal
 {
-    private:
-        std::string _type;
     public:
         Cat();
         Cat(const Cat& obj);
