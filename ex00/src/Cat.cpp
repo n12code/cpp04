@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:03 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 18:20:46 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/17 08:57:38 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ Cat::Cat() : Animal()
     std::cout << "log - cat constructor" << std::endl;
 }
 
-Cat::Cat(const Cat& obj) : Animal()
+Cat::Cat(const Cat& obj) : Animal(obj)
 {
-    Animal::operator=(obj);
     std::cout << "log - cat copy constructor" << std::endl;
 }
 

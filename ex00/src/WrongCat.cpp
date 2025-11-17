@@ -20,9 +20,8 @@ WrongCat::WrongCat() : WrongAnimal()
     std::cout << "log - wrongCat constructor" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal()
+WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(obj)
 {
-    WrongAnimal::operator=(obj);
     std::cout << "log - wrongCat copy constructor" << std::endl;
 }
 

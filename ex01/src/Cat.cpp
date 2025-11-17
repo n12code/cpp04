@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:03 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:47:26 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/17 08:56:44 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Cat::Cat() : Animal(), _brain(new Brain())
 
 Cat::Cat(const Cat& obj) : Animal(obj), _brain(new Brain(*obj._brain))
 {
-    Animal::operator=(obj);
     std::cout << "log - cat copy constructor" << std::endl;
 }
 

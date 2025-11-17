@@ -6,12 +6,12 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:03 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 19:36:17 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/17 08:55:20 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Cat.hpp"
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 #include <iostream>
 
 Cat::Cat() : AAnimal(), _brain(new Brain())
@@ -22,7 +22,6 @@ Cat::Cat() : AAnimal(), _brain(new Brain())
 
 Cat::Cat(const Cat& obj) : AAnimal(obj), _brain(new Brain(*obj._brain))
 {
-    AAnimal::operator=(obj);
     std::cout << "log - cat copy constructor" << std::endl;
 }
 

@@ -7,11 +7,11 @@ OBJ_DIR = obj
 SRC_DIR = src
 INC_DIR = inc
 
-FILES = main Animal Dog Cat Brain
+FILES = main AAnimal Dog Cat Brain
 SRC = $(addprefix $(SRC_DIR)/, $(addsuffix .cpp, $(FILES)))
 OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(FILES)))
 
-HEADERS = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
+HEADERS = AAnimal.hpp Dog.hpp Cat.hpp Brain.hpp
 HEADERS := $(addprefix $(INC_DIR)/, $(HEADERS))
 
 

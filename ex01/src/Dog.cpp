@@ -6,7 +6,7 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:06 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 17:44:10 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/17 08:56:47 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ Dog::Dog() : Animal(), _brain(new Brain())
 
 Dog::Dog(const Dog& obj) :  Animal(obj), _brain(new Brain(*obj._brain))
 {
-    Animal::operator=(obj);
     std::cout << "log - dog copy constructor" << std::endl;
 }
 

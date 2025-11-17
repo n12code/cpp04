@@ -6,12 +6,12 @@
 /*   By: nbodin <nbodin@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 12:14:06 by nbodin            #+#    #+#             */
-/*   Updated: 2025/11/12 19:37:03 by nbodin           ###   ########lyon.fr   */
+/*   Updated: 2025/11/17 08:55:29 by nbodin           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/Dog.hpp"
-#include "../inc/Animal.hpp"
+#include "../inc/AAnimal.hpp"
 #include <iostream>
 
 Dog::Dog() : AAnimal(), _brain(new Brain())
@@ -22,7 +22,6 @@ Dog::Dog() : AAnimal(), _brain(new Brain())
 
 Dog::Dog(const Dog& obj) :  AAnimal(obj), _brain(new Brain(*obj._brain))
 {
-    AAnimal::operator=(obj);
     std::cout << "log - dog copy constructor" << std::endl;
 }
 
